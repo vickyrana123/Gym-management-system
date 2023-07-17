@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Gym App</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		/* Insert any custom CSS here */
+		* {
+			margin: 0px;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			background-size: 1900px 900px;
+		}
+
+		header {
+			background-color: #333;
+			color: #fff;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			/* padding: 20px; */
+			padding-bottom: 50px;
+			padding-top: 40px;
+			/* opacity: 0.9; */
+		}
+
+		header nav {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+
+		header nav ul {
+			display: flex;
+			flex-direction: row;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		header nav ul li {
+			margin-right: 40px;
+			font-size: 18px;
+			cursor: pointer;
+		}
+
+		header nav ul li:hover {
+			/* text-decoration: underline; */
+		}
+
+		#logo {
+			font-size: 30px;
+			font-weight: bold;
+			cursor: pointer;
+			margin-left: 100px;
+
+		}
+
+		#free-trial-btn,
+		#contact-btn {
+			background-color: #ff0000;
+			color: #fff;
+			font-size: 16px;
+			padding: 10px 20px;
+			border-radius: 5px;
+			margin-right: 20px;
+			cursor: pointer;
+		}
+
+		#free-trial-btn:hover,
+		#contact-btn:hover {
+			background-color: #ff0000;
+		}
+
+		.slider {
+			position: relative;
+			height: 500px;
+			margin-bottom: 0px;
+		}
+
+		.slider img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: opacity 0.5s ease-in-out;
+			object-fit: cover;
+		}
+
+		.slider img.active {
+			opacity: 1;
+		}
+
+		.contacts {
+			background-color: #f5f5f5;
+			padding: 50px;
+			text-align: center;
+			font-family: Arial, sans-serif;
+		}
+
+		.contacts h2 {
+			margin-top: 0px;
+			margin-bottom: 30px;
+			font-size: 36px;
+			color: #333;
+		}
+
+		.contacts form {
+			max-width: 500px;
+			margin: 0 auto;
+		}
+
+		.contacts label {
+			display: block;
+			margin-bottom: 10px;
+			font-size: 18px;
+			font-weight: bold;
+			color: #333;
+		}
+
+		.contacts input[type="text"],
+		.contacts input[type="email"],
+		.contacts textarea {
+			width: 100%;
+			padding: 10px;
+			border: 2px solid #ccc;
+			border-radius: 5px;
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+
+		.contacts textarea {
+			height: 200px;
+		}
+
+		.contacts button[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+		.contacts button[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+
+		.a1 {
+			margin-top: 200px;
+			margin-left: 180px;
+			color: #f5f5f5;
+			font-size: 40px;
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+		}
+
+		.b1 {
+			background-color: #ff0000;
+			color: #f5f5f5;
+			margin-top: 70px;
+			font-size: 20px;
+			padding: 20px;
+			padding-left: 70px;
+			padding-right: 70px;
+			border-radius: 5px;
+			opacity: 0.9;
+			margin-left: 600px;
+			cursor: pointer;
+		}
+
+		a:link {
+			text-decoration: none;
+		}
+
+		.d1 {
+			margin-top: 0px;
+			background-color: #f5f5f5;
+			margin-left: 850px;
+
+		}
+
+		.d2 {
+			background-color: #333;
+			/* margin-top: 300px; */
+			padding-top: 3px;
+
+		}
+
+		.a2 {
+			color: azure;
+			padding-top: 80px;
+			padding-left: 80px;
+			font-size: 40px;
+		}
+
+		.a3 {
+			color: azure;
+			font-size: 16px;
+			font-weight: normal;
+			padding-top: 15px;
+			padding-left: 80px;
+			padding-bottom: 30px;
+		}
+
+		.d4 {
+			margin-left: 50px;
+			padding-bottom: 30px;
+		}
+
+		.d5 {
+			margin-top: 80px;
+			margin-left: 700px;
+		}
+
+		.d5 a {
+			color: azure;
+		}
+
+		.d7 {
+			margin-top: 40px;
+
+		}
+
+		.k1,
+		.k2,
+		.k3,
+		.k4 {
+			color: azure;
+			padding-top: 30px;
+			padding-left: 70px;
+
+		}
+
+		.v1 {
+			background-image: url('Person.jpg');
+			margin-top: 0px;
+		}
+
+		.l2 {
+			background-color: #f5f5f5;
+
+		}
+
+		.l4 {
+			color: azure;
+		}
+
+		.l3 {
+			background-image: url('ro1.jpg');
+			padding-top: 150px;
+			padding-bottom: 180px;
+			padding-left: 200px;
+		}
+
+		.b2 {
+			background-color: #ff0000;
+			color: #f5f5f5;
+			margin-top: 70px;
+			font-size: 20px;
+			padding: 20px;
+			padding-left: 70px;
+			padding-right: 70px;
+			border-radius: 5px;
+			opacity: 0.9;
+			margin-left: 50px;
+			cursor: pointer;
+		}
+
+		h2 {
+			margin-top: 0px;
+		}
+
+		* {
+			margin-top: 0px;
+			margin-bottom: 0px;
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+	</style>
+	<link rel="stylesheet" href="css/dynamic.css">
+</head>
+<!-- <body background="image2.jpg" height="700"> -->
+
+<body>
+	<header id=".hd">
+
+		<div id="logo">My Gym</div>
+		<nav id="navig">
+			<ul>
+				<li><a href="mainpage.html">Home</a></li>
+				<li><a href="getstarted.html">About</a></li>
+				<li><a href="FitnessInstituteLinks.html">Fitness Institute List</a></li>
+				<li><a href="Gallery.html">Gallery</a></li>
+				<!-- <li>Contacts</li> -->
+			</ul>
+			<div>
+				<button id="contact-btn"><a href="contact.php">Contact</a></button>
+				<button id="free-trial-btn"><a href="login.html">START NOW</a></button>
+
+				<!-- </ -->
+		</nav>
+	</header>
+
+	<main>
+		<main>
+			<!-- <h1 class="a1">YOUR PERSONALIZED JOURNEY TO HEALTH & FITNESS</h1> -->
+			<!-- <button class="b1"><a href="login.html" style="color: aliceblue;">Get Started</a></button> -->
+
+
+			<div class="slider">
+				<img src="image1.jpg" alt="Image 1" class="active">
+				<img src="image2.jpg" alt="Image 2">
+				<img src="image3.jpg" alt="Image 3">
+			</div>
+
+		</main>
+
+	</main>
+	<div class="v1" style="margin-top: 0px; padding: 0px;">
+		<div class="d1" style="margin-top: 0px; padding: 0px;">
+			<h2 style="color: black; margin-bottom: 10px; margin-top: 70px; padding-top: 50px; padding-left: 30px;">
+				Weight Training</h2>
+			<h3 style="font-size: 17px; font-weight: normal; margin-bottom: 10px; padding-left: 30px; color: dimgray;">
+				From bodybuilding to powerlifting and everything in between, My Gym <br>
+				is platform that has different gym which includes the equipment to help you <br>
+				reach your goals. With dumbells up to 150lbs, 7 squat racks, 5 deadlift platforms,<br>
+				2 competition benches, and a variety of plate loaded and pin loaded machines, <br>
+				we have everything you need.</h3>
+			<h2 style="color: black; margin-bottom: 10px; padding-left: 30px;">General Fitness</h2>
+			<h3 style="font-size: 17px; font-weight: normal; margin-bottom: 10px; padding-left: 30px; color: dimgray;">
+				If your goals are to improve your overall health and wellness, <br>
+				My gym is a platform in which everything you need. My Gym have cardio equipment spanning two floors
+				including 8 stepmills, 15+ treadmills, row machines, <br>
+				exercise bikes, spin bikes, ellipticals, arc trainers and even a Jacob's Ladder. <br>
+				In addition to cardio equipment,My Gym have stretching areas with mats, <br>
+				foam rollers, bands, light weights, and much more.</h3>
+			<h2 style="color: black; margin-bottom: 10px; padding-left: 30px;">Functional Training</h2>
+			<h3
+				style="font-size: 17px; font-weight: normal;  padding-bottom: 50px; padding-left: 30px; color: dimgray;">
+				With 60 feet of turf with a sled, stackable plyometric boxes, weighted medicine balls, battle ropes,
+				squat racks, and deadlift platforms gym functional training room has all <br>
+				the equipment you need to take your training to the next level.</h3>
+		</div>
+		<div class="l2">
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+		<div class="l3">
+			<h1 class="l4">YOUR FITNESS STARTS HERE<br>
+				SAVE TIME AND SIGN UP ONLINE</h1>
+			<button class="b2"><a href="login.html" style="color: aliceblue;">BECOME A MEMBER</a></button>
+		</div>
+	</div>
+	<div class="d2">
+		<div class="d7">
+			<a href="getstarted.html" class="k1">About</a>
+			<a href="Gym_owner_list.php" class="k2">Gym Owner</a>
+			<a href="Gallery.html" class="k3">Gallery</a>
+			<a href="contact.php" class="k4">Contact</a>
+		</div>
+		<h1 class="a2">My Gym</h1>
+		<h2 class="a3">It's time to wake up and take charge of your health, <br>
+			body & life. our mission is to provide you with<br>
+			the ultimate fitness experience. We focuses on your<br>
+			specific fitness needs which helps you to <br>
+			achieve you personal goals.</h2>
+		<br>
+	</div>
+	<div class="d4">
+		<a href="https://twitter.com/i/flow/login">&emsp;&emsp;<img src="twitter.png" height="30" width="30"></a>
+		<a href="https://www.facebook.com/">&emsp;<img src="facebook.png" height="30" width="30"></a>
+		<a href="https://www.instagram.com/">&emsp;<img src="instagram.png" height="30" width="30"></a>
+		<a href="https://www.youtube.com/account">&emsp;<img src="youtube.png" height="30" width="30"></a>
+		<a href="https://www.linkedin.com/login">&emsp;<img src="linkedin.png" height="30" width="30"></a>
+	</div>
+
+
+
+
+	<script src="script.js"></script>
+	<script>
+
+		document.addEventListener('DOMContentLoaded', function () {
+
+			const images = document.querySelectorAll('.slider img');
+
+
+			let activeIndex = 0;
+
+
+			function changeImage() {
+
+				images.forEach(function (image) {
+					image.classList.remove('active');
+				});
+
+				images[activeIndex].classList.add('active');
+
+
+				activeIndex++;
+				if (activeIndex >= images.length) {
+					activeIndex = 0;
+				}
+				setTimeout(changeImage, 5000);
+			}
+
+
+			changeImage();
+		});
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Fitness Hub</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+      background-color: #f2f2f2;
+    }
+
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Styles */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 15px 0;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .header-scrolled {
+      background-color: #2962ff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      color: #2962ff;
+      transition: color 0.3s ease-in-out;
+      margin-left: 500px;
+    }
+
+    .logo span {
+      font-weight: 400;
+    }
+
+    nav ul {
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 40px;
+    }
+
+    nav ul li:first-child {
+      margin-left: 0;
+    }
+
+    nav ul li a {
+      color: #333;
+      font-weight: 700;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover {
+      color: #2962ff;
+    }
+
+    /* Hero Section Styles */
+
+    .hero {
+      background-image: url('https://images.pexels.com/photos/3851568/pexels-photo-3851568.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(41, 98, 255, 0.5);
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 20px;
+      animation: slideInUp 1s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 30px;
+      max-width: 600px;
+      animation: slideInUp 1s ease-in-out 0.5s;
+    }
+
+    .cta-button {
+      display: block;
+      width: 200px;
+      background-color: #2962ff;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 0 auto;
+      text-align: center;
+      transition: background-color 0.3s ease-in-out;
+      animation: slideInUp 1s ease-in-out 1s;
+    }
+
+    .cta-button:hover {
+      background-color: #0039cb;
+    }
+
+    /* Features Section Styles */
+
+    .features {
+      padding: 80px 0;
+    }
+
+    .feature-item {
+      text-align: center;
+      margin-bottom: 40px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .feature-item img {
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-item h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .feature-item p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      color: #666;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    /* Footer Styles */
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 50px 0;
+      text-align: center;
+      animation: slideInUp 1s ease-in-out;
+    }
+
+    footer p {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    /* Animations */
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .logo {
+        margin-right: auto;
+      }
+
+      nav {
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cta-button {
+        width: 100%;
+      }
+
+      .feature-item {
+        margin-bottom: 80px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">Gym C</a>
+        <ul>
+          <!-- <li><a href="#">Membership</a></li>
+          <li><a href="#">Classes</a></li>
+          <li><a href="#">Trainers</a></li>
+          <li><a href="#">Contact Us</a></li> -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Get Fit, Stay Healthy!</h1>
+        <p>Join Fitness Hub today and start your journey towards a healthier lifestyle. Our experienced trainers and top-notch facilities will help you achieve your fitness goals.</p>
+        <!-- <a href="#" class="cta-button">Get Your Membership</a> -->
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="feature-item">
+        <img src="https://images.pexels.com/photos/840996/pexels-photo-840996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Feature 1">
+        <h2>Cardio Equipment</h2>
+        <p>Our gym is equipped with top-of-the-line cardio equipment, including treadmills, ellipticals, and stationary bikes to help you burn those extra calories.</p>
+      </div>
+      <div class="feature-item">
+        <img src="https://images.pexels.com/photos/879150/pexels-photo-879150.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Feature 2">
+        <h2>Strength Training</h2>
+        <p>Build muscle and increase strength with our extensive range of weight training equipment, including free weights, resistance machines, and more.</p>
+      </div>
+      <div class="feature-item">
+        <img src="https://images.pexels.com/photos/3961333/pexels-photo-3961333.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Feature 3">
+        <h2>Yoga & Pilates</h2>
+        <p>Unwind and relax with our yoga and pilates classes, designed to improve flexibility, balance, and core strength.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">Gym C</a>
+        <ul>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">Classes</a></li>
+          <li><a href="#">Trainers</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2023 Gym C. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

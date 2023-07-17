@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Booking Details</title>
+    <link rel="stylesheet" type="text/css" href="bookingdisplay.css">
+</head>
+
+<body>
+    <header>
+        <h1>Booking Details</h1>        
+    </header>
+    <header>
+		<nav>
+			<ul>
+                <li><a href="customer_profile.php">Back to Profile</a></li>
+				<li><a href="mainpage.html">Home</a></li>
+				<li><a href="FitnessInstituteLinks.html">Fitness Institutes</a></li>				
+				<li><a href="mainpage.html">Log-Out</a></li>
+			</ul>
+		</nav>
+	</header>
+
+    <div class="container">
+        <h2>Upcoming Sessions</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Gym Name</th>
+                    <th>Date</th>
+                    <th>Time In</th>
+                    <th>Time Out</th>
+                    <th>Bill Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through upcoming sessions -->
+                <tr>
+                    <td>Gym A</td>
+                    <td>May 1, 2023</td>
+                    <td>10:00 AM</td>
+                    <td>12:00 PM</td>
+                    <td>$50.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2>Booking History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Gym Name</th>
+                    <th>Date</th>
+                    <th>Time In</th>
+                    <th>Time Out</th>
+                    <th>Bill Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loop through completed bookings -->
+                <tr>
+                    <td>Gym B</td>
+                    <td>April 1, 2023</td>
+                    <td>2:00 PM</td>
+                    <td>4:00 PM</td>
+                    <td>$40.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

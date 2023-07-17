@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+			margin: 0;
+			padding: 0;
+			background-size: 1900px 900px;
+		}
+		header {
+			background-color: #333;
+			color: #fff;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			/* padding: 20px; */
+			padding-bottom: 50px;
+			padding-top: 40px;
+			/* opacity: 0.9; */
+		}
+		header nav {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+		header nav ul {
+			display: flex;
+			flex-direction: row;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		header nav ul li {
+			margin-right: 40px;
+			font-size: 18px;
+			cursor: pointer;
+		}
+		#logo {
+			font-size: 30px;
+			font-weight: bold;
+			cursor: pointer;
+			margin-left: 100px;
+			
+		}
+		#free-trial-btn, #contact-btn {
+			background-color: #ff0000;
+			color: #fff;
+			font-size: 16px;
+			padding: 10px 20px;
+			border-radius: 5px;
+			margin-right: 20px;
+			cursor: pointer;
+		}
+		#free-trial-btn:hover, #contact-btn:hover {
+			background-color: #ff0000;
+		}
+        .contacts {
+  background-color: #f5f5f5;
+  padding: 50px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.contacts h2 {
+  margin-bottom: 30px;
+  font-size: 36px;
+  color: #333;
+}
+
+.contacts form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contacts label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.contacts input[type="text"],
+.contacts input[type="email"],
+.contacts textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contacts textarea {
+  height: 200px;
+}
+
+.contacts button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contacts button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+a:link{
+		text-decoration: none;
+
+}
+
+.d1{
+    display: inline-block;
+    margin-top: 0px;
+    background-color: ghostwhite;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin-left: 300px;
+}
+.d2{
+    display: inline-block;
+    margin-top: 100px;
+    background-color: ghostwhite;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 35px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+
+}
+.d3{
+    display: inline-block;
+    margin-top: 0px;
+    background-color: ghostwhite;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin-left: 300px;
+
+}
+.d4{
+    display: inline-block;
+    margin-top: 10px;
+    background-color: ghostwhite;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 35px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+
+}
+.d5{
+    display: inline-block;
+    margin-top: 0px;
+    background-color: ghostwhite;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin-left: 300px;
+
+}
+.d6{
+    display: inline-block;
+    margin-top: 10px;
+    background-color: ghostwhite;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-right: 35px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+
+}
+.s2{
+    background-color: #333;
+    color: azure;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+.k2{
+    font-size: 40px;
+    margin-bottom: 15px ;
+}
+.k3{
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 20px;
+}
+.d7{
+    display: inline-block;
+    margin-top: 0px;
+    background-color: ghostwhite;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 100px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin-left: 300px;
+
+}
+.d8{
+    display: inline-block;
+    margin-top: 10px;
+    background-color: ghostwhite;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 35px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+
+}
+
+    </style>
+    <link rel="stylesheet" href="css/dynamic.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <header>
+		<div id="logo">My Gym</div>
+		<nav>
+			<ul>
+				<li><a href="mainpage.html" style="color: aliceblue;">Home</a></li>
+				<li><a href="getstarted.html" style="color: aliceblue;">About</a></li>
+				<li><a href="FitnessInstituteLinks.html" style="color: aliceblue;">Fitness Institute List</a></li>
+				<!-- <li>Gallery</li> -->
+				<!-- <li>Contacts</li> -->
+			</ul>
+			<div>
+				<button id="contact-btn"><a href="contact.php" style="color: aliceblue;">Contact</a></button>
+				<button id="free-trial-btn"><a href="login.html" style="color: aliceblue;">START NOW</a></button>
+
+			<!-- </ -->
+            </nav>
+	</header>
+    <br>
+    <div id="#gallery" align="center">
+
+        <img src="image6.jpg" height="400" width="400">
+
+        <img src="ins1.png" height="400" width="400">
+
+        <img src="image1.jpg" height="400" width="400">
+
+        <img src="image4.jpg" height="400" width="400">
+
+        <img src="image5.jpg" height="400" width="400">
+
+        <img src="image2.jpg" height="400" width="400">
+
+        <img src="ins12.jpg" height="400" width="400">
+
+        <img src="ins23.png" height="400" width="400">
+
+        <img src="image3.jpg" height="400" width="400">
+
+</div>
+    <div class="s2">
+        <h2 class="k1">For any queries? Call 8849943937</h2>
+        <h2 class="k1">&emsp;&emsp;&emsp;&emsp;&emsp;OR</h2>
+        <h2 class="k1">Mail vickrana281@gmail.com</h2>
+        <h1 class="k2">My Gym</h1>
+		<h2 class="k3">It's time to wake up and take charge of your health, <br>
+			body & life. our mission is to provide you with<br> 
+			the ultimate fitness experience. We focuses on your<br> 
+			specific fitness needs which helps you to <br>
+			achieve you personal goals.</h2>
+			<br>
+    </div>
+    
+</body>
+</html>

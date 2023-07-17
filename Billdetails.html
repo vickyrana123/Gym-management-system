@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gym Billing</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f2f2f2;
+		}
+
+		header {
+			background-color: #222222;
+			color: white;
+			padding: 20px;
+			text-align: center;
+		}
+
+		h1 {
+			margin: 0;
+		}
+
+		main {
+			margin: 20px;
+			padding: 20px;
+			background-color: white;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px #888888;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		th, td {
+			padding: 18px;
+			text-align: left;
+			border-bottom: 2px solid #dddddd;
+		}
+        td{
+            font-size: 17px;
+        }
+
+        th{
+            font-size: 20px;
+        }
+
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		.total {
+			font-weight: bold;
+		}
+
+		@media only screen and (max-width: 600px) {
+			main {
+				margin: 10px;
+				padding: 10px;
+			}
+
+			table {
+				font-size: 20px;
+			}
+		}
+
+        button {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			font-size: 20px;
+			cursor: pointer;
+			/* float: right; */
+            align-self: center;
+			margin-top: 20px;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+		}
+
+		button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Gym Billing</h1>
+	</header>
+	<main>
+		<table>
+			<tr>
+				<th colspan="2">Customer Information</th>
+			</tr>
+			<tr>
+				<td>Name:</td>
+				<td id="customerName"></td>
+			</tr>
+			<tr>
+				<td>Gym:</td>
+				<td id="gymName"></td>
+			</tr>
+			<tr>
+				<td>Date:</td>
+				<td id="date"></td>
+			</tr>
+			<tr>
+				<th colspan="2">Booking Information</th>
+			</tr>
+			<tr>
+				<td>Time-in:</td>
+				<td id="timeIn"></td>
+			</tr>
+			<tr>
+				<td>Time-out:</td>
+				<td id="timeOut"></td>
+			</tr>
+			<tr>
+				<th colspan="2">Total Amount</th>
+			</tr>
+			<tr>
+				<td colspan="2" class="total" id="totalAmount"></td>
+			</tr>
+
+            
+		</table>
+        <div align="center">
+            <button> Make Payment </button>
+        </div>
+        
+	</main>
+	<script>
+		// Set values for customer and booking information
+		document.getElementById("customerName").innerHTML = "John Doe";
+		document.getElementById("gymName").innerHTML = "Fitness First";
+		document.getElementById("date").innerHTML = "April 26, 2023";
+		document.getElementById("timeIn").innerHTML = "10:00 AM";
+		document.getElementById("timeOut").innerHTML = "11:00 AM";
+		document.getElementById("totalAmount").innerHTML = "10.00";
+	</script>
+</body>
+</html>

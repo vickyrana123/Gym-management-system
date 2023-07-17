@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gym Owner Profile</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* Header */
+        body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 1rem;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav ul li {
+	margin: 0 1rem;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	max-width: 800px;
+	margin: 2rem auto;
+	padding: 2rem;
+	background-color: #f2f2f2;
+}
+
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+form label {
+	display: block;
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+
+form input, form select {
+	padding: 0.5rem;
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
+	border-radius: 5px;
+	border: none;
+}
+
+form input[type="submit"] {
+	background-color: #333;
+	color: #fff;
+	font-size: 1.2rem;
+	padding: 0.5rem;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+input[type="email" i] {
+    padding: 0.5rem;
+    background-color: #eee;
+}
+
+input[type="tel" i] {
+    padding: 0.5rem;
+    background-color: #eee;
+}
+#price-per-hour {
+	width: 300px;
+    padding: 0.5rem;
+    background-color: #eee;
+}
+form input[type="submit"]:hover {
+	background-color: #555;
+}
+
+/* Header */
+header {
+  background-color: #262626;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+}
+
+header h2 {
+  margin: 0;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+/* Main content */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 80%;
+}
+
+.profile h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.profile label {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.profile input[type="text"] {
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.profile button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+ 
+}
+
+#description{
+    width: 400px;
+    height: 150px;
+}
+    </style>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<nav>
+				<ul>
+					<li><a href="mainpage.html">Home</a></li>
+					<li><a href="FitnessInstituteLinks.html">Fitness Institute List</a></li>
+                    <li><a href="#">Bookings List</a></li>
+					<li><a href="#">Log-Out</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+    
+	<section class="profile">
+		<div class="container">
+            <br>
+			<h1>Gym Owner Profile</h1>
+			<form action="#" method="post">
+				<div class="form-group">
+					<label for="gym-name">Gym Name</label>
+					<input type="text" id="gym-name" name="gym-name" value="Gym-Name">
+				</div>
+				<div class="form-group">
+					<label for="owner-name">Owner Name</label>
+					<input type="text" id="owner-name" name="owner-name" value="Name">
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" value="Email">
+				</div>
+				<div class="form-group">
+					<label for="phone">Phone</label>
+					<input type="tel" id="phone" name="phone" value="999-999-9999">
+				</div>
+				<div class="form-group">
+					<label for="address">Address</label>
+					<input type="text" id="address" name="address" value="Gym_Address">
+				</div>
+				<div class="form-group">
+					<label for="city">City</label>
+					<input type="text" id="city" name="city" value="Surat">
+				</div>
+				<div class="form-group">
+					<label for="state">State</label>
+					<input type="text" id="state" name="state" value="Gujarat">
+				</div>
+				<div class="form-group">
+					<label for="zip">Zip Code</label>
+					<input type="text" id="zip" name="zip" value="12345">
+				</div>
+				<div class="form-group">
+					<label for="price-per-hour">Price (per hour)</label>
+					<input type="number" class="form-control" id="price-per-hour" placeholder="Enter the price per hour(INR)">
+				  </div>
+				<div class="form-group">
+					<label for="description">Description</label>
+					<textarea id="description" name="description">We are a top-notch gym with state-of-the-art equipment and world-class trainers.</textarea>
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Save Changes">
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<p>&copy; 2023 Gym App</p>
+		</div>
+	</footer>
+</body>
+</html>

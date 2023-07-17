@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer Profile</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}	
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 1rem;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav ul li {
+	margin: 0 1rem;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	max-width: 800px;
+	margin: 2rem auto;
+	padding: 2rem;
+	background-color: #f2f2f2;
+}
+
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+form label {
+	display: block;
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+
+form input, form select {
+	padding: 0.5rem;
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
+	border-radius: 5px;
+	border: none;
+}
+
+form input[type="submit"] {
+	background-color: #333;
+	color: #fff;
+	font-size: 1.2rem;
+	padding: 0.5rem;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.booking-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.booking-button:hover {
+  background-color: #0062cc;
+}
+
+    </style>
+	
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="FitnessInstituteLinks.html">Fitness Institutes</a></li>
+				<li><a href="contact-us.html">Bookings List</a></li>
+				<li><a href="contact-us.html">Log-Out</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>Customer Profile</h1>
+		<form action="#" method="post">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" value="Name" required>
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" value="Email" required>
+			<label for="age">Age:</label>
+			<input type="number" id="age" name="age" value="25" required>
+			<label for="gender">Gender:</label>
+			<select id="gender" name="gender" required>
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+				<option value="other">Other</option>
+			</select><br><br>
+			<input type="submit" value="Save Changes">
+		</form>
+	</main>
+
+	<div class="container">
+		<form>
+		  <!-- form inputs here -->
+		</form>
+		<div class="button-container">
+		  <a href="customerbooking.html" class="booking-button">Book a Session</a>
+		</div>
+	  </div>
+	  
+</body>
+</html>

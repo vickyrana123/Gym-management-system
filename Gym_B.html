@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GYM</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            padding-top: 15px;
+            background-color: #fff;
+            height: 80px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 40px;
+        }
+
+        nav ul li:first-child {
+            margin-left: 0;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 2rem;
+            letter-spacing: 1px;
+            margin-left: 500px;
+        }
+
+        nav ul li a:hover {
+            color: #f43f24;
+        }
+
+        /* Hero Section Styles */
+
+        .hero {
+            /* background-image: url('https://cdn.pixabay.com/photo/2017/06/21/09/56/sport-2424123_960_720.jpg'); */
+            background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z3ltfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .cta-button {
+            display: block;
+            width: 200px;
+            background-color: #f43f24;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 auto;
+            text-align: center;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background-color: #d32f19;
+        }
+
+        /* Features Section Styles */
+
+        .features {
+            background-color: #f9f9f9;
+            padding: 80px 0;
+        }
+
+        .feature-item {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .feature-item img {
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-item h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .feature-item p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            color: #666;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Footer Styles */
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .logo {
+                margin-right: auto;
+            }
+
+            nav {
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .cta-button {
+                width: 100%;
+            }
+
+            .feature-item {
+                margin-bottom: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">GYM B</a>
+                <ul>
+                    <!-- <li><a href="#">Membership</a></li>
+                    <li><a href="#">Classes</a></li>
+                    <li><a href="#">Trainers</a></li>
+                    <li><a href="#">Contact Us</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Join the best fitness community in town!</h1>
+                <p>At GYM, we are dedicated to helping individuals of all fitness levels achieve their goals and
+                    maintain a healthy lifestyle. Our state-of-the-art facilities and experienced trainers will guide
+                    you on your journey to a healthier, happier you.</p>
+                <!-- <a href="#" class="cta-button">Get Your Membership</a> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="feature-item">
+                <img src="https://cdn.pixabay.com/photo/2017/07/22/00/52/sport-2523832_960_720.jpg" alt="Feature 1">
+                <h2>Cardio Equipment</h2>
+                <p>Our gym is equipped with top-of-the-line cardio equipment, including treadmills, ellipticals, and
+                    stationary bikes to help you burn those extra calories.</p>
+            </div>
+            <div class="feature-item">
+                <img src="https://cdn.pixabay.com/photo/2017/08/07/01/25/people-2597448_960_720.jpg" alt="Feature 2">
+                <h2>Strength Training</h2>
+                <p>Build muscle and increase strength with our extensive range of weight training equipment, including
+                    free weights, resistance machines, and more.</p>
+            </div>
+            <div class="feature-item">
+                <img src="https://cdn.pixabay.com/photo/2015/06/08/15/02/pilates-802459_960_720.jpg" alt="Feature 3">
+                <h2>Yoga & Pilates</h2>
+                <p>Unwind and relax with our yoga and pilates classes, designed to improve flexibility, balance, and
+                    core strength.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">GYM</a>
+                <ul>
+                    <li><a href="#">Membership</a></li>
+                    <li><a href="#">Classes</a></li>
+                    <li><a href="#">Trainers</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <p>&copy; 2023 GYM. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
